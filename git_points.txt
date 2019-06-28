@@ -1,0 +1,111 @@
+b2 git-2:
+Repo Creation (bare, non bare) @ 37th min
+
+bare repo is the central repo, we can we can not view and edit, users will push the code from their local repo or workspace (non bare) into bare repo 
+to create bare repo the command is  'git init --bare central.git'
+
+git clone central.git/ naga -- cloning from central repo
+git add t1  -- add to staging area or index area
+git commit t1 -m "t1 file modified"  -- commit to comited area
+git pull -- pulling from central repo
+git push - push to central repo
+
+git log in one line
+--------------------
+
+git log --oneline
+0940ff6 (HEAD -> master, origin/master) t2 file created by user naga
+8b1d164 t1 file modified
+9a4f542 this is my new file in sekhar repository
+
+first 7 chars of commit id and commit message
+
+git shortlog
+naga (3):
+      this is my new file in sekhar repository
+      t1 file modified
+      t2 file created by user naga
+
+git add . -- consider all files(old&new) in working directory to upload into staging area
+
+.git ignore:
+-----------
+create a file .gitignore and write .class -- this means do not allow the files which has .class extension
+
+if .class file to add:
+git add -f java.class
+
+
+What is branching and merging in git
+
+To Create new branch:
+---------------------
+git branch <branchname> -- To Create a new branch
+git branch -- to see the existing branches
+git checkout <branchname> -- to enter into another branch
+branches are isolated
+
+To Merge the branches:
+----------------------
+git merge <source branch> <destination branch> -- to merge files in source branch to destination branch
+git branch -d new -- to delete a branch 'new'
+
+Try to delete the branch before merging and observe the error
+
+git checkout -b <branchname> - To create a branch and checkout into that
+
+Stash:
+------
+Explanied @43 min in git class 5
+
+Undo:
+-----
+Explanied @51 min in git class 5 and class 6
+
+"git checkout -- <file>..." to discard changes in working directory
+
+HEAD explained @ 20th min in git class 6
+
+Undo explained at 27min in git class 6
+
+git reset --mixed --Undo from staging area
+
+git reset --hard
+HEAD is now at 4145adc hello focus files cimmit
+
+Internal HEAD is used for to check the latest files.
+git reset --soft -- deleting tem HEAD rom commiting area
+
+
+git diff -- to see difference b/w WD and Staging area
+
+git diff HEAD- to see difference b/w WD and Commiting area
+
+git diff --cached - to see difference b/w Staging area and Commiting area
+
+
+SNAPSHOT: Explained @16th Min in git class 7
+========
+It Stores difference between the files in a snapshot
+
+Rewriting commit messages @23rd Min in git class 7
+
+
+git rebase -i HEAD~4 -- To change the commit messages
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
